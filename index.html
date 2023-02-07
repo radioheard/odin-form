@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A music ♫</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="brand"><img src="odin-lined.png" class="logo"></div>
+        <article></article>
+        <footer>Photo by <a href="https://unsplash.com/es/@siddhant_rane">Siddhant Rane</a> on <a href="https://unsplash.com">Unsplash</a></footer>
+    </div>
+    <div class="main-container">
+        <div class="intro-container">
+            <h3>This is not a real online service (yet)! Ever thought about playin your favorite songs? Wondering how people manage to creaete beautiful melodies and craft their own songs? </h3>
+            <br>
+            <h3>Become the musician you always wanted to be!</h3>
+        </div>
+        <div class="form-container">
+            <div class="main-form">
+                <h4>Sign up to start your musical journey!</h4>
+                <br>
+                <form action="amusic.com" method="post" id="myForm">
+                    <div>
+                        <label for="first_name">First Name</label>
+                        <input type="text" name="first_name" id="first_name" placeholder="John" required>
+                    </div>
+
+                    <div>
+                        <label for="last_name">Last Name</label>
+                        <input type="text" name="last_name" id="last_name" placeholder="Wick" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="john.wick@example.gov" required>
+                    </div>
+
+                    <div>
+                        <label for="tel">Phone Number</label>
+                        <input type="tel" name="tel" id="tel" placeholder="(area)-420420" required>
+                    </div>
+
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="pswd1" placeholder=" " required>
+                        <small id="confirmPwd-feedback"></small>
+                    </div>
+
+                    <div>
+                        <label for="conf_pwd">Confirm Password</label>
+                        <input type="password" name="conf_pwd" id="pswd2" placeholder=" " required>
+                    </div>
+            </div>
+                <div class="sub-form">
+                    <button type="submit">Create Account</button>
+                    <h5>Already have an account?  <a id='login'href="www.google.com">Log in</a> </h5>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>  
+        const form = document.getElementById("myForm");
+        const password = document.getElementById("pswd1");
+        const confirmPassword = document.getElementById("pswd2")
+        const feedback = document.getElementById("confirmPwd-feedback");
+        let isPasswordMatch = false;
+        
+        confirmPassword.addEventListener("input", () => {
+          if (password.value != confirmPassword.value) {
+            feedback.innerHTML = "Password did not match";
+            isPasswordMatch = false;
+          } else {
+            feedback.innerHTML = "";
+            isPasswordMatch = true;
+          }
+        });
+        form.onsubmit = function () {
+          if (isPasswordMatch) {
+            alert("Form submitted. Great!");
+            return true;
+          }
+          alert("Wait! Password did not match.");
+          return false;
+        };
+        </script> 
+</body>
+</html>

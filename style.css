@@ -1,0 +1,169 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    background-color: #a5a5a5;
+
+}
+
+
+@font-face {
+    font-family: 'norsebold';
+    src: url('norse-bold-webfont.woff2') format('woff2'),
+         url('norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.background {
+    background-image: url("bckgd.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-width: 35vw;
+    display: flex;
+    flex-direction: column;
+
+}
+
+article {
+    flex: 1;
+}
+footer {
+    align-self: center;
+    color: azure;
+}
+
+.brand {
+    color: aliceblue;
+    float: left;
+    background-color: rgba(0, 255, 255, 0.192);
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 20vh;
+    padding: 1rem;
+    font-family: 'norsebold';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h3 {
+    margin: 0;
+    font-size: 21px;
+}
+
+h4 {
+    margin: 0;
+}
+
+.logo {
+    height: 17rem;
+}
+
+.main-container {
+    background-color: rgb(201, 229, 253);
+    padding-top: 5vh;
+}
+
+.intro-container {
+    font-size: 0.9rem;
+    padding: 20px;
+}
+
+.main-form {
+box-shadow: 1px 7px 18px -6px rgba(0,0,0,0.75);
+padding: 20px;
+background-color: rgb(233, 244, 253);
+margin-bottom: 10px;
+}
+.sub-form {
+    padding: 20px;
+    padding-left: 30px;
+}
+
+button {
+    border-radius: 5px;
+    padding: 15px;
+    border: 0px;
+    background-color: rgb(99, 21, 172);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: antiquewhite;
+    box-shadow: 1px 7px 18px -6px rgba(0,0,0,0.75);
+}
+button:hover {
+    background-color: rgb(113, 45, 177);
+}
+
+a:link, a:visited {
+    color: azure;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+#login {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+#login:hover {
+    color: hotpink;
+}
+
+label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-family: monospace;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 15vw);
+    gap: 10px;
+    column-gap: 10vh;
+}
+
+input{
+    border-radius: 3px;
+    border: 1.5px solid rgb(91, 102, 248);
+}
+
+input:focus {
+    background-color: rgb(253, 244, 251);
+    outline: none;
+    border: 1.5px solid rgb(87, 97, 240);
+    border-radius: 3px;
+    box-shadow: 0 0 5pt 2pt #a3eef3;
+}
+
+input:invalid {
+    border-color: rgb(185, 2, 2);
+}
+
+input:placeholder-shown{
+    border-radius: 3px;
+    border: 1.5px solid rgb(91, 102, 248);
+}
+
+small{
+    color: red;
+    font-family: monospace;
+    font-size: 0.8rem;
+    position: relative;
+}
